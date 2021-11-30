@@ -1,0 +1,33 @@
+ALGORITHM Different
+VAR
+Set1,Set2: Array_of_INTEGER
+i,j: INTEGER :=0;
+TEST :Boolean;
+Sum:INTEGER:=0
+
+BEGIN
+For1 i FROM 0 to Set1.length-1 STEP 1 DO
+       TEST := FALSE;
+For2 j FROM 0 to Set.length-1 STEP 1 DO
+IF (Set1[i]=Set2[j]) THEN
+   Set2[j]:=0
+   TEST:=TRUE
+END IF
+
+IF (TEST=TRUE) THEN
+   Set1[i]:=0
+END IF
+END For2
+END For1
+
+FOR i FROM 0 to Set1.length-1  STEP1  DO
+Sum:= Sum + Set1[i]
+END For
+
+FOR j FROM 0 to Set2.length-1  STEP1  DO
+Sum:= Sum + Set2[j]
+END For
+
+write ("The Sum of distingue elements is " , Sum)
+
+END

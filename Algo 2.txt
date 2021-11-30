@@ -1,0 +1,45 @@
+Function Dot_Product (V1,V2: Array_of_INTEGER):INTEGER
+VAR
+i,j: INTEGER
+PS: INTEGER:=0;
+
+BEGIN
+For i FROM 0 to 2 STEP A DO
+PS := PS + Vect1[i]*Vect2[j];
+END For
+Return PS
+
+END.
+
+
+BEGIN
+For i FROM 0 to 2 STEP1 DO
+ For j FROM 0 to 2 STEP1 DO 
+   IF (i=j) DO 
+   PS:= PS + Vect1[i]*Vect2[j]  
+   END IF
+ END For
+END For
+Return PS
+
+END.
+
+
+
+
+ALGORITHM DOT_Product
+VAR
+V1,V2: Array_of_INTEGER[3]
+X: INTEGER :=0;
+
+BEGIN
+write ("donner V1")
+Read V1
+write ("donner V2")
+Read V2
+X:=Dot_Product (V1,V2);
+
+IF (X=0) THEN write ("les deux vecteurs sont iortogonaux");
+ELSE Write ("les deux vecteurs ne sont pas ortogonaux");
+
+END.
